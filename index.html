@@ -752,6 +752,7 @@
 					Cookies.set("essays", essays, {expires: 30});
 					Cookies.set("hoursMissed", hoursMissed, {expires: 30});
 					Cookies.set("suspended", suspended, {expires: 30});
+					popup("Game saved in local storage.", ["OK"], [removePopup]);
 				}
 
 				
@@ -1248,6 +1249,31 @@
 					}]);
 				}]);
 			})();
+			}
+
+			else {
+				gpa = Cookies.get("gpa");
+				sat = Cookies.get("sat");
+				exhaustion = Cookies.get("exhaustion");
+				sanity = Cookies.get("sanity");
+				essays = Cookies.get("essays");
+				hoursMissed = Cookies.get("hoursMissed");
+				timesAttended[0] = Cookies.get("timesAttended[0]");
+				timesAttended[1] = Cookies.get("timesAttended[1]");
+				timesAttended[2] = Cookies.get("timesAttended[2]");
+				timesAttended[3] = Cookies.get("timesAttended[3]");
+				timesAttended[4] = Cookies.get("timesAttended[4]");
+				if (Cookies.get("suspended") === "true") {
+					alert("true");
+				}
+				else {
+					alert("false " + Cookies.get("suspended"));
+				}
+				gpa = Cookies.get("gpa");
+				gpa = Cookies.get("gpa");
+				gpa = Cookies.get("gpa");
+				gpa = Cookies.get("gpa");
+				popup("Game restored from local storage.", ["OK"], [removePopup]);
 			}
 		</script>
 	</body>
