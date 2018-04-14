@@ -920,7 +920,7 @@
 			var interResults = [-1, -1, -1, -1, -1];
 
 			function interview() {
-			if (!popupActive) {
+			if (!popupActive && document.getElementById("interview").length > 0) {
 				var schools = ["Harvard", "Yale", "Princeton", "Stanford", "MIT"];
 				if (time >= 16 && time <= 19) {
 					var which = document.getElementById("interview");
@@ -1295,6 +1295,7 @@
 				updateValue("sanity", sanity);
 				updateValue("social", social);
 				updateValue("complete", essays);
+				document.getElementById("dateSpan").innerHTML = day;
 				update();
 				popup("Game restored from local storage.", ["OK"], [removePopup]);
 			}
