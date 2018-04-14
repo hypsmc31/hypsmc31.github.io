@@ -1,0 +1,1215 @@
+<!-- no one likes a cheater -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			31 Days to HYPSMC
+		</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			html, body {
+				padding: 0;
+				margin: 0;
+				//min-width: 1024px;
+			}
+			img {
+				padding: 20px;
+				display: block;   
+				margin-left: 5%;
+			}
+			body {
+				background-color: #F2F2F2;
+			}
+			#wrapper1 {
+				background-color: rgb(204, 204, 204);
+				position: relative;
+				text-align: center;
+				
+				padding: 0;
+				margin: 0;
+			}
+			#wrapper2 {
+				position: relative;
+				background-color: white;
+				width: 98%;
+				margin: 0 auto;
+			}
+			
+			#wrapper3 {
+				position: relative;
+				background-color: #E5E5E5;
+				text-align: center;
+				width: 800px;
+				border: 1px solid #C1C1C1;
+				margin: 24px auto;
+			}
+			
+			#wrapper4 {
+				position: relative;
+				background-color: white;
+				text-align: left;
+				border: 2px solid rgb(137, 19, 54);
+				width: 700px;
+				font-family: "Arial", sans-serif;
+				color: #555555;
+				font-weight: normal;
+				font-size: 18px;
+				margin: 24px auto;
+			}
+			
+			#wrapper4 p {
+				padding: 12px;
+			}
+			
+			.popup {
+				position: absolute;
+				font-family: "Arial", sans-serif;
+				box-shadow: 0 0 5px black;
+				background-color: white;
+				color: black;
+				width: 25%;
+				
+				margin-top: 50px;
+				border: 1px solid rgb(137, 19, 54); 
+				left: 0;
+				font-size: 18px;
+				right: 0;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: 2;
+				padding: 15px;
+			
+			}
+			.popup p {
+				text-align: center;
+			}
+			
+			.popup button {
+				text-align: center;
+				margin: 5px;
+				background-color: #860038;
+				color: white;
+				outline: none;
+				border: none;
+				padding: 5px 12px 5px 12px;
+				border-radius: 5px;
+			}
+			
+			.popup button:hover {
+				background-color: #8D8C7F;
+				cursor: pointer;			
+			}
+			
+			h2 {
+				font-family: "Arial", sans-serif;
+				font-size: 15px;
+				font-weight: normal;
+				margin-top: 500px;
+				margin-left: 3px;
+				margin-right: 3px;
+			}
+			
+			.active {
+				color: #555555;
+				background-color: #E5E5E5;
+				padding: 15px;
+				outline: none;
+				font-weight: bold;
+				border: 1px solid #C1C1C1;
+				display: inline;
+				padding-bottom: 31px;
+				
+				z-index: 1;
+				position: relative;
+
+				border-bottom: none;
+				
+			}
+			
+			
+			.inactive {
+				background-color: rgb(85, 85, 85);
+				outline: none;
+					
+				border: none;
+				padding: 15px;
+				text-align: center;
+				display: inline;
+			
+				padding-top: 8px;
+				padding-bottom: 8px;
+			
+				color: white;
+				border-radius: 2px;
+			}
+			
+			.inactive2 {
+				background-color: rgb(85, 85, 85);
+				outline: none;
+				cursor: default;
+				border: none;
+				padding: 15px;
+				text-align: center;
+				display: inline;
+			
+				padding-top: 8px;
+				padding-bottom: 8px;
+			
+				color: white;
+				border-radius: 2px;			
+			}
+			
+			.active:hover {
+				cursor: default;
+			}
+			
+			.inactive:hover {
+				background-color: #8D8C7F;
+				cursor: pointer;
+			}
+			
+			#date {
+				float: right;
+				background-color: white; 
+				display: inline;
+				padding: 7px 8% 7px 7px;
+				margin-right: 10%;
+				margin-top: 2.5%;
+				font-family: "Arial", sans-serif;
+				font-size: 14px;
+				border: 5px solid rgb(204, 204, 204);
+			}
+			
+			.dynamic {
+				color: rgb(137, 19, 54);
+			}
+			
+			.button {
+				background-color: #860038;
+				color: white;
+				outline: none;
+				border: none;
+				padding: 5px 12px 5px 12px;
+				border-radius: 5px;
+				margin-left: 15px;
+			}
+			.button2 {
+				background-color: #860038;
+				color: white;
+				outline: none;
+				border: none;
+				padding: 5px 12px 5px 12px;
+				border-radius: 5px;
+				margin-left: 15px;
+
+			}
+			.button:hover {
+				background-color: #8D8C7F;
+				cursor: pointer;
+			}
+			
+			#sleepCount {
+				border: 1px solid rgb(137, 19, 54);
+				outline: none;
+				font-size: 18px;
+				font-family: "Arial", sans-serif;
+				width: 25px;
+				margin-left: 5px;
+			}
+			#sleepCount:focus {
+				outline: none;
+				
+			}
+
+			select {
+				font-family: "Arial", sans-serif;
+				color: #860038;
+				padding: 0;
+				font-size: 18px;
+				border: 1px solid #860038;
+			}
+			
+			select:focus {
+				outline: none;
+				border: none;
+				border: 1px solid #860038;
+				background-color: white;
+			}
+			
+			#popupWrapper {
+				line-height: 170%;
+			}
+
+			#result {
+				width: 100%;
+				height: 100vh;
+				background-color: rgb(201, 0, 22);
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="content" style="">
+			<div style="height: 2px; background-color: rgb(137, 19, 54);"></div>
+			<div id="date">
+				<span style="font-weight: bold;">Welcome!</span>
+				<br />
+				<span id="dateSpan">1</span> December, <span id="weekday">Saturday</span> | <span id="time">3:00 P.M.</span>
+				
+				<button class="button" id="school" style="margin-right: -75px;" onclick="handleAction(3)">Go to school</button>
+				<br />
+			
+					Exhaustion: 	<span id="exhaustionSmall">0
+				</span> | Sanity: <span id="sanitySmall">100
+				</span>
+				<br />
+			</div>
+			<img src="logo2.png">	
+			
+			<div id="wrapper1">
+				<div id="popupWrapper"></div>
+				<br />
+				<br />
+				
+				<div style="margin-left: -341px;">
+				<h2 class="active" onclick="handle(0)" id="academics">
+					Academics
+				</h2>
+				<h2 class="inactive" onclick="handle(1)" id="ec">
+					Extracurriculars
+				</h2>
+				<h2 class="inactive" onclick="handle(2)" id="health">
+					Health
+				</h2>
+				<h2 class="inactive" onclick="handle(3)" id="apps">
+					Applications
+				</h2>
+				</div>
+				
+				<div id="wrapper2">
+					<div style="height: 5px; background-color: rgb(137, 19, 54); width: 95%; margin: 0 auto; padding-left: 5%; margin-bottom: -15px; margin-top: 15px;"></div>
+					<div id="wrapper3">
+						<div id="wrapper4">
+							<span id="academicsSec" style="display: inline;">
+								<p>
+									GPA: <span class="dynamic" id="gpa">3.6</span> / 4.0 <button class="button" onclick="handleAction(0)" id="study">Study (3 hours)</button>
+									<br /><br />
+									SAT: <span class="dynamic" id="sat">1300</span> / 1600 <button class="button" onclick="handleAction(1)" id="prepare">Prepare (3 hours)</button>
+									<br /> <br />
+									School missed: <span class="dynamic" id="missed">0</span> hours
+								</p>
+							</span>
+							<span id="ecSec" style="display: none;">
+								<p>
+									Current extracurriculars:
+									<br /> <br />
+									<span class="dynamic" id="ecList">
+										Student Government (Tuesdays and Thursdays) 
+										<button class="button" onclick="handleEc(0)">Attend meeting (2 hours)</button>
+										<span style="display: none;" id="footballHidden">
+											<br /> <br />
+											Football (Mondays and Wednesdays)
+											<button class="button" onclick="handleEc('football')">Attend practice (3 hours)</button>
+										</span>
+										<span style="display: none;" id="acaGamesHidden">
+											<br /><br />
+											Academic Games (Wednesdays and Fridays)
+											<button class="button" onclick="handleEc('acaGames')">Attend meeting (2 hours)</button>
+										</span>
+										<span style="display: none;" id="newspaperHidden">
+											<br /><br />
+											Student Newspaper (Mondays and Thursdays)
+											<button class="button" onclick="handleEc('newspaper')">Attend meeting (2 hours)</button>
+										</span>
+										<span style="display: none;" id="mathHidden">
+											<br /><br />
+											Math club (Tuesdays and Fridays)
+											<button class="button" onclick="handleEc('math')">Attend meeting (2 hours)</button>
+										</span>
+									</span>
+									<br /> <br />
+									Joinable extracurriculars: <br /><br />
+									<span class="dynamic" id="joinableEC">
+										
+										<span id="footballInitial">
+											Football Team
+											<button class="button" onclick="handleEc('football')">Join</button>
+											<br /> <br />
+										</span>
+
+										<span id="acaGamesInitial">
+											Academic Games
+											<button class="button" onclick="handleEc('acaGames')">Join</button>
+											<br /> <br /> 
+										</span>
+										
+										<span id="newspaperInitial">
+											Student Newspaper
+											<button class="button" onclick="handleEc('newspaper')">Join</button>
+											<br /> <br />
+										</span>
+										
+										<span id="mathInitial">
+											Math club
+											<button class="button" onclick="handleEc('math')">Join</button>
+											<br /> <br />
+										</span>
+
+									</span>
+									Leadership positions: <span id="leadership" class="dynamic"></span>
+								</p>
+							</span>
+							<span id="healthSec" style="display: none;">
+								<p>
+									Exhaustion: <span class="dynamic" id="exhaustion">0</span> / 100 <button class="button" onclick="handleAction(2)" id="sleep">Sleep (7 hours)</button>
+									<button class="button" onclick="handleAction(4)" id="nap">Nap (1 hour)</button>
+									<br /> <br />
+									Sanity: <span class="dynamic" id="sanity">100</span> / 100
+									<button class="button" onclick="handleAction(5)" id="friend">Spend time with friends (2 hours)</button>
+									<button class="button" onclick="handleAction(7)" id="watchTV">Watch TV (2 hours)</button>
+									<br /><br />
+									Social aptitude: <span class="dynamic" id="social">50</span> / 100
+								</p>
+							</span>
+							<span id="appsSec" style="display: none;">
+								<p>
+									Worked on essays for <span class="dynamic" id="complete">0</span> hours
+									<button class="button" onclick="handleAction(6)" id="write">Write</button>
+									<br />
+									<br />
+									Schedule 
+									<select id="interview">
+										<option>Harvard (strongly recommended)</option>
+										<option>Yale (recommended)</option>
+										<option>Princeton (recommended)</option>
+										<option>Stanford (optional)</option>
+										<option>MIT (strongly recommmended)</option>
+									</select> interview
+									<button class="button" onclick="interview()">Go</button>
+								</p>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="result" style="display: none;">
+			<div style="width: 70%; margin: 0 auto; display: block; background-color: white; text-align: center; box-shadow: 0 0 5px; height: 100vh; font-family: 'Arial', sans-serif;" id="harvardDiv">
+				<img src="logos/harvard-logo.png" style="margin: 0 auto; display: block;" width="600px" id="harvardLogo">
+				<img src="logos/yale-logo.png" style="margin: 0 auto; display: none;" width="600px" id="yaleLogo">
+				<img src="logos/princeton-logo.png" style="margin: 0 auto; display: none;" width="600px" id="princetonLogo">
+				<img src="logos/stanford-logo.png" style="margin: 0 auto; display: none;" width="600px" id="stanfordLogo">
+				<img src="logos/mit-logo.png" style="margin: 0 auto; display: none;" width="600px" id="mitLogo">
+				<img src="logos/caltech-logo.png" style="margin: 0 auto; display: none;" width="600px" id="caltechLogo">
+				<p style="font-size: 18px; padding: 15px; line-height: 30px;"><span id="collegeResult">Congratulations! I am delighted to inform you that the Committee on Admissions has admitted you to the Class of 2023. Please accept my personal congratulations for your outstanding achievements. <br /><br /> Faced with many more talented and highly qualified candidates than it has room to admit, the Admissions Committee has taken great care to choose individuals who present extraordinary academic, extracurricular and personal strengths. In making each admission decision, the Committee keeps in mind that the excellence of Harvard College depends most of all on the talent and promise of the people assembled here, particularly our students. In voting to offer you admission, the Committee has demonstrated its firm belief that you can make important contributions during your college years and beyond.</span> <br /> <br />
+				<button class="button" onclick="showDecisions(whichDecision, (results[whichDecision] ? true : false))">Next decision</button>
+</p>
+			</div>
+	
+</p>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+		<script type="text/javascript">
+		
+			// i'm trusting you with these readable variable names
+
+			var whichDecision = 0;
+			var time = 15;
+			var day = 1;
+
+			var gpa = 3595;
+
+			var sat = 1300;
+
+			var hoursMissed = 0;
+
+			var toUpdate = [ ];
+			var updateValues = [ ];
+			
+			
+			var sanity = 100;
+			
+			var exhaustion = 0;
+
+			var essays = 0;
+			
+			var social = 50;
+
+			var suspended = false;
+
+			function getIds(idArr) {
+				var output = [ ];
+				for (i = 0; i < idArr.length; i++) {
+					output[i] = document.getElementById(idArr[i]);
+				}
+				return output;
+			}
+
+			function handle(button) {	
+				if (!popupActive) {
+					var buttons = getIds(["academics", "ec", "health", "apps"]);
+					document.getElementById(buttons[button].id + "Sec").style.display = "inline";
+				
+					if (buttons[button].className != "active") {
+						buttons[button].className = "active";
+						for (i = 0; i < buttons.length; i++) {
+							if (i != button) {
+								buttons[i].className = "inactive"; 
+								document.getElementById(buttons[i].id + "Sec").style.display = "none";
+							}
+						}
+					}
+				}	
+			}
+			
+			function calcMissed(l) {
+				var missed = 0;
+				if (time < 8) {
+					missed =  (time + l) - 8;
+				}
+				else if (time >= 8 && time <= (15 - l)) {
+					missed = l;
+				}
+				else {
+					missed =  15 - time;
+				}
+				hoursMissed += missed;
+				toUpdate[toUpdate.length] = document.getElementById("missed");
+				updateValues[updateValues.length] = hoursMissed;
+			}
+			
+
+			function updateValue(value, amount) {
+				toUpdate[toUpdate.length] = document.getElementById(value);
+				updateValues[updateValues.length] = amount;
+				if (value === "sanity") {
+					toUpdate[toUpdate.length] = document.getElementById("sanitySmall");
+					updateValues[updateValues.length] = sanity;
+				}
+				if (value === "exhaustion") {
+					toUpdate[toUpdate.length] = document.getElementById("exhaustionSmall");
+					updateValues[updateValues.length] = exhaustion;					
+				}
+			}
+
+			function removePopup() {
+				document.getElementById("popupWrapper").removeChild(pop);
+				popupActive = false;
+				changeClasses(false);
+			}
+
+	
+			function handleAction(button) {
+				if (!popupActive) {
+				// GPA
+				if (button === 0) {
+					
+					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [
+							function() {
+								sanity -= 5;
+								updateValue("sanity", sanity);
+								exhaustion += 5;
+								updateValue("exhaustion", exhaustion);
+								
+								gpa += 5;
+								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
+								calcMissed(3);
+								time += 3;
+								removePopup();
+								update();
+								
+							}, removePopup]);
+					}
+					else {
+						sanity -= 5;
+						exhaustion += 5;
+						updateValue("exhaustion", exhaustion);
+						updateValue("sanity", sanity);
+						time += 3;
+						gpa += 5;
+						console.log(gpa);
+						updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
+						update();
+					}
+				}
+				// SAT
+				else if (button === 1) {
+				
+					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [
+							function() {
+								if (sat <= 1590) {
+									sat = sat + 10;
+								}
+								updateValue("sat", sat);
+								calcMissed(3);
+								time += 3;
+								sanity -= 5;
+								updateValue("sanity", sanity);
+								removePopup();
+								update();
+								exhaustion += 5;
+								updateValue("exhaustion", exhaustion);
+							}, removePopup
+						]);
+					}
+					else {
+						time += 3;
+						if (sat <= 1590) {
+							sat = sat + 10;
+						}
+						exhaustion += 5;
+						updateValue("exhaustion", exhaustion);
+						updateValue("sat", sat);
+						sanity -= 5;
+						updateValue("sanity", sanity);
+						update();
+					}			
+				}
+				
+				// SLEEP
+				else if (button === 2) {
+					if (time > 1 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [
+							function() {
+								if (exhaustion <= 50) {
+									exhaustion = 0;
+								}
+								else {
+									exhaustion -= 50;
+								}
+								updateValue("exhaustion", exhaustion);
+								calcMissed(7);
+								time += 7;
+								removePopup();
+								update();
+							}, removePopup
+						]);
+					}
+					else {
+
+						if (exhaustion <= 50) {
+							exhaustion = 0;
+						}
+						else {
+							exhaustion -= 50;
+						}
+						updateValue("exhaustion", exhaustion);
+						time += 7;
+						update();
+					}
+				}
+				
+				// SCHOOL
+				else if (button === 3) {
+					if (time < 8 || time > 14 || dayOfWeek === "Saturday" || dayOfWeek === "Sunday") {
+						popup("School is from 8:00 A.M. to 3:00 P.M. on weekdays.", ["OK"], [function() {
+							removePopup();
+						}]);
+					}
+					else {
+						time += (15 - time);
+						exhaustion += 20;
+						sanity -= 10;
+						updateValue("sanity", sanity);
+						updateValue("exhaustion", exhaustion);
+						update();
+					}
+				}
+				
+				// NAP
+				else if (button === 4) {
+					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
+							if (exhaustion >= 5) {
+								exhaustion -= 5;
+							}
+							updateValue("exhaustion", exhaustion);
+							time += 1;
+							removePopup();
+							update();
+						}, removePopup]);
+					}
+					else {
+						if (exhaustion >= 5) {
+							exhaustion -= 5;
+						}
+						updateValue("exhaustion", exhaustion);
+						time += 1;
+						update();					
+					}
+				}
+
+				// SPEND TIME WITH FRIENDS
+				else if (button === 5) {
+					if (dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You can only spend time with friends on the weekend.", ["OK"], [removePopup]);
+					}
+					else {
+						if (sanity <= 90) {
+							sanity += 10;
+						}
+						if (social <= 99) {
+							social += 1;
+						}
+						exhaustion += 5;
+						updateValue("exhaustion", exhaustion);
+						updateValue("sanity", sanity);
+						updateValue("social", social);
+						time += 2;
+						update();
+					}
+				}
+
+				// WRITE
+				else if (button === 6) {
+					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
+							hoursMissed++;
+							essays++;
+							time++;
+							exhaustion += 5;
+							sanity -= 5;
+							updateValue("exhaustion", exhaustion);
+							updateValue("sanity", sanity);
+							updateValue("complete", essays);
+							removePopup();
+							update();
+						}, removePopup]);
+					}
+					else {							
+						essays++;
+						time++;
+						exhaustion += 5;
+						sanity -= 5;
+						updateValue("exhaustion", exhaustion);
+						updateValue("sanity", sanity);
+						updateValue("complete", essays);
+						update();
+					}
+				}
+				
+				// TV
+				else if (button === 7) {
+				
+					if (time > 6 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
+							calcMissed(2);
+							time += 2;
+							if (sanity <= 90) {
+								sanity += 10;
+							}
+							updateValue("sanity", sanity);
+							removePopup();
+							update();
+						}, removePopup]);
+					}
+					else {
+						time += 2;
+						if (sanity <= 90) {
+							sanity += 10;
+						}
+						updateValue("sanity", sanity);
+						update();
+					}
+					
+				}
+
+				
+			}
+			}
+			
+			var ec = ["Student Government"];
+			
+			// Student gov, football, academic games, newspaper, math
+			var timesAttended = [0, 0, 0, 0, 0];
+			
+			function handleEc(button) {
+				
+				if (!popupActive) {
+					if (button === 0) {
+						if (time != 15 || (dayOfWeek != "Tuesday" && dayOfWeek != "Thursday")) {
+							popup("Student government meets on Tuesdays and Thursdays at 3:00 P.M.", ["OK"], [removePopup]);
+						}
+						else {
+							timesAttended[0]++;
+							if (timesAttended[0] === 8) {
+								popup("Congratulations! You have been named President of Student Government.", ["OK"], [removePopup]);
+								document.getElementById("leadership").innerHTML += "President of Student Government <br /> <br />";
+							}
+							time += 2;
+							if (sanity <= 95) {
+								sanity += 5;
+							}
+							updateValue("sanity", sanity);
+							if (social < 100) {
+								social += 1;
+							}
+							updateValue("social", social);
+							update();
+						}
+					}
+
+					else if (button === "football") {
+						if (ec.indexOf("Football") === -1) {
+							firstTimeEc("Football", "football");
+						}
+						
+						else {
+							ecMeeting(["Monday", "Wednesday"], "Football", function() {
+							timesAttended[1]++;
+							if (timesAttended[1] === 8) {
+								popup("Congratulations! You have been named Team Captain of football.", ["OK"], [removePopup]);
+								document.getElementById("leadership").innerHTML += "Football Team Captain <br /> <br />";
+							}
+								exhaustion += 20;
+								time += 3;
+								gpa -= 20;
+								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
+								updateValue("sanity", sanity);
+								updateValue("exhaustion", exhaustion);
+								update();
+							});	
+						}
+					}
+					
+					else if (button === "acaGames") {
+						if (ec.indexOf("Academic Games") === -1) {
+							firstTimeEc("Academic Games", "acaGames");
+						}
+						
+						else {
+							ecMeeting(["Wednesday", "Friday"], "Academic Games", function() {
+							timesAttended[2]++;
+							if (timesAttended[2] === 8) {
+								popup("Congratulations! You have been named President of Academic Games.", ["OK"], [removePopup]);
+								document.getElementById("leadership").innerHTML += "President of Academic Games <br /> <br />";
+							}
+								time += 2;
+								if (sanity <= 95) {
+									sanity += 5;
+								}
+								gpa += 10;
+								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
+								updateValue("sanity", sanity);
+								update();
+							});	
+						}				
+					}
+					
+					else if (button === "newspaper") {
+						if (ec.indexOf("Student Newspaper") === -1) {
+							firstTimeEc("Student Newspaper", "newspaper");
+						}
+						
+						else {
+							ecMeeting(["Monday", "Thursday"], "Student Newspaper", function() {
+							timesAttended[3]++;
+							if (timesAttended[3] === 8) {
+								popup("Congratulations! You have been named Editor-in-chief of Student Newspaper.", ["OK"], [removePopup]);
+								document.getElementById("leadership").innerHTML += "Editor-in-chief of Student Newspaper <br /> <br />";
+							}
+								time += 2;
+								if (sanity <= 95) {
+									sanity += 5;
+								}
+								if (social <= 97) {
+									social += 3;
+								}
+								updateValue("social", social);
+								updateValue("sanity", sanity);
+								update();
+							});	
+						}				
+					}
+					
+					else if (button === "math") {
+						if (ec.indexOf("Math club") === -1) {
+							firstTimeEc("Math club", "math");
+						}
+						
+						else {
+							ecMeeting(["Tuesday", "Friday"], "Math club", function() {
+							timesAttended[4]++;
+							if (timesAttended[4] === 8) {
+								popup("Congratulations! You have been named President of Math club.", ["OK"], [removePopup]);
+								document.getElementById("leadership").innerHTML += "President of Math club <br /> <br />";
+							}
+								time += 2;
+								if (sanity <= 95) {
+									sanity += 5;
+								}
+								if (social >= 3) {
+									social -= 3;
+								}
+								gpa += 10;
+								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
+								updateValue("social", social);
+								updateValue("sanity", sanity);
+								update();
+							});	
+						}
+					}
+					
+					
+					
+				}
+			}
+
+			function firstTimeEc(name, button) {
+				ec[ec.length] = name;
+				var initial = document.getElementById(button + "Initial");
+				initial.parentNode.removeChild(initial);
+				document.getElementById(button + "Hidden").style.display = "inline";
+			}
+			
+			function ecMeeting(meetingTime, name, func) {
+				if ((dayOfWeek === meetingTime[0] || dayOfWeek === meetingTime[1]) && time === 15) {
+					func();
+				}
+				else {
+					popup(name + " meets on " + meetingTime[0] + "s and " + meetingTime[1] + "s at 3:00 P.M.", ["OK"], [removePopup]);
+				}
+			}
+
+			var interResults = [-1, -1, -1, -1, -1];
+
+			function interview() {
+			if (!popupActive) {
+				var schools = ["Harvard", "Yale", "Princeton", "Stanford", "MIT"];
+				if (time >= 16 && time <= 19) {
+					var which = document.getElementById("interview");
+					var whichVal = which.value.split(" ")[0];
+					if (social <= 50) {
+						interResults[schools.indexOf(whichVal)] = -250;
+						popup("The interview went terribly. The " + whichVal + " interviewer seemed unimpressed by your stuttering and incomprehensible babble about your extracurriculars and service work.", ["OK"], [function() {
+						removePopup();
+						time++;
+						update();
+						which.remove(which.selectedIndex);
+					}]);
+					}
+					else if (social > 50 && social < 90) {
+						interResults[schools.indexOf(whichVal)] = 500;
+						popup("The interview was fairly uneventful. You and the " + whichVal + " interviewer had an average conversation about your extracurriculars and service work. ", ["OK"], [function() {
+						removePopup();
+						time++;
+						update();
+						which.remove(which.selectedIndex);
+						}]);						
+					}
+					else if (social >= 90) {
+						interResults[schools.indexOf(whichVal)] = 1000;
+						popup("You had a fantastic interview! You somehow managed to convince the " + whichVal + " interviewer that you've both cured cancer and solved P = NP. The interviewer assures you " + ((Math.random() >= .5) ? "she" : "he") + " will write the best recommendation possible.", ["OK"], [function() {
+						removePopup();
+						time++;
+						update();
+						which.remove(which.selectedIndex);
+						}]);		
+					}
+
+				}
+				else {
+					popup("Interviews must be conducted from 4 P.M. to 7 P.M.", ["OK"], [function() {
+						removePopup();
+					}]);
+				}
+				}
+			}
+			
+			function changeClasses(on) {
+				var buttons = getIds(["academics", "ec", "health", "apps"]);
+				var buttons2 = getIds(["study", "prepare", "nap", "sleep"]);
+				
+				if (on) {
+					for (i = 0; i < buttons.length; i++) {
+						if (buttons[i].className === "inactive") {
+							buttons[i].className = "inactive2";
+						}
+					}
+					for (i = 0; i < buttons2.length; i++) {
+						buttons2[i].className = "button2";
+					}
+				}
+				else {
+					for (i = 0; i < buttons.length; i++) {
+						if (buttons[i].className === "inactive2") {
+							buttons[i].className = "inactive";
+						}
+					}	
+					for (i = 0; i < buttons2.length; i++) {
+						buttons2[i].className = "button";
+					}		
+				}
+			}
+			
+			var pop;
+			var popupActive = false;
+
+			function checkOver() {
+				if (day > 31) {
+					decision();
+				}
+			}
+			
+			function checkVitals() {
+				if (exhaustion >= 100) {
+					popup("You collapse from exhaustion and sleep for 3 days.", ["OK"], [function() {
+						day += 3;
+						document.getElementById("dateSpan").innerHTML = day;
+						exhaustion = 5;
+						updateValue("exhaustion", exhaustion);
+						removePopup();
+						update();
+						
+					}]);
+				}
+				else if (sanity <= 0) {
+					popup("You suffer a nervous breakdown and are commited to an asylum for 1 week. ", ["OK"], [function() {
+						day += 7;
+						document.getElementById("dateSpan").innerHTML = day;
+						sanity = 75;
+						updateValue("sanity", sanity);
+						removePopup();
+						update();
+					}]);
+				}
+				
+			}
+			var results = [];
+			function decision() {
+
+				var essayScore = 0;
+				if (essays < 11) {
+					essayScore = -1000 + (essays * 400);
+				}
+				else {
+					essayScore = 3000 + (100 * essays);
+				}
+				var leadershipScore = 0;
+				for (i = 0; i < timesAttended.length; i++) {
+					if (timesAttended[i] >= 8) {
+						leadershipScore += 1000;
+					}
+				}
+			
+				var harvardR = Math.random() * 2000 + 1000;
+				var yaleR = Math.random() * 2000 + 1000;
+				var princetonR = Math.random() * 2000 + 1000;
+				var stanfordR = Math.random() * 3000 + 1000;
+				var mitR = Math.random() * 3000 + 1000;
+				if ((gpa * 1.6) + (ec.length * 750) + (sat * 2) + interResults[0] + essayScore + leadershipScore > (17000 + harvardR)) {
+					results[0] = true;
+				} 
+				else {
+					results[0] = false;
+				}
+				if ((gpa * 1.6) + (ec.length * 750) + (sat * 2) + interResults[1] + essayScore + leadershipScore > (17000 + yaleR)) {
+					results[1] = true;
+				}
+				else {
+					results[1] = false;
+				}
+				if ((gpa * 1.5) + (ec.length * 750) + (sat * 2) + interResults[2] + essayScore + leadershipScore * .8 > (18000 + princetonR)) {
+					results[2] = true;;
+				}
+				else {
+					results[2] = false;
+				}
+				if ((gpa * 1.5) + (ec.length * 750) + (sat) + interResults[3] / 2 + essayScore + leadershipScore * 2 > (17000 + stanfordR)) {
+					results[3] = true;
+				}
+				else {
+					results[3] = false;	
+				}
+				if ((gpa * 1.7) + (ec.length * 750) + (sat * 2.5) + interResults[4] * 1.5 + essayScore + leadershipScore > (18500 + mitR)) {
+					results[4] = true;
+				}
+				else {
+					results[4] = false;
+				}
+				if (gpa >= 4000 && sat >= 1600) {
+					results[5] = true;
+				}
+				else {
+					results[5] = false;
+				}
+
+
+				showDecisions(whichDecision, (results[0] ? true : false));
+				
+			}
+
+			function showDecisions(currentDecision, accepted) {
+				if (currentDecision === 0) {
+					document.getElementById("content").style.display = "none";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "<span style='font-weight: bold;'>Congratulations!</span> I am delighted to inform you that the Committee on Admissions has admitted you to the Class of 2023. Please accept my personal congratulations for your outstanding achievements. <br /><br /> Faced with many more talented and highly qualified candidates than it has room to admit, the Admissions Committee has taken great care to choose individuals who present extraordinary academic, extracurricular and personal strengths. In making each admission decision, the Committee keeps in mind that the excellence of Harvard College depends most of all on the talent and promise of the people assembled here, particularly our students. In voting to offer you admission, the Committee has demonstrated its firm belief that you can make important contributions during your college years and beyond." : "The Committee on Admissions has completed its Regular Decision meetings, and I am very sorry to inform you that we cannot offer you admission to the Class of 2023. I wish that a different decision had been possible, but I hope that receiving our final decision now will be helpful to you as you make your college plans. ");
+					document.getElementById("result").style.display = "block";
+					document.getElementById("harvardDiv").style.display = "block";
+				}	
+				if (currentDecision === 1) {
+					document.getElementById("harvardLogo").style.display = "none";
+					document.getElementById("yaleLogo").style.display = "block";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "" : "After careful consideration of your application, I am sorry to inform you that the Admissions Committee is unable to offer you admission to the Class of 2023.");
+					document.getElementById("result").style.backgroundColor = "#0F4D92";
+					
+				}
+				if (currentDecision === 2) {
+					document.getElementById("yaleLogo").style.display = "none";
+					document.getElementById("princetonLogo").style.display = "block";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "princeton accepted ." : "rejected ");
+					document.getElementById("result").style.backgroundColor = "#FF8F00";
+					
+				}
+				if (currentDecision === 3) {
+					document.getElementById("princetonLogo").style.display = "none";
+					document.getElementById("stanfordLogo").style.display = "block";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "stanford accepted ." : "rejected ");
+					document.getElementById("result").style.backgroundColor = "#8c1515";
+					
+				}
+				if (currentDecision === 4) {
+					document.getElementById("stanfordLogo").style.display = "none";
+					document.getElementById("mitLogo").style.display = "block";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "mit accepted ." : "rejected ");
+					document.getElementById("result").style.backgroundColor = "#A31F34";
+					
+				}
+				if (currentDecision === 5) {
+					document.getElementById("mitLogo").style.display = "none";
+					document.getElementById("caltechLogo").style.display = "block";
+					document.getElementById("collegeResult").innerHTML = (accepted ? "caltech accepted ." : "rejected ");
+					document.getElementById("result").style.backgroundColor = "#FF6C0C";
+					
+				}
+				whichDecision++;
+			}
+
+			function checkSchool() {
+				if (hoursMissed >= 10 && !suspended) {
+					suspended = true;
+					popup("You missed too much school and have been suspended for 3 days.", ["OK"], [function() {
+						day += 3;
+						document.getElementById("dateSpan").innerHTML = day;
+						removePopup();
+						update();
+					}]);
+				}
+				if (hoursMissed >= 20 && suspended) {
+					popup("You missed too much school and have been expelled. Game over!", ["OK"], [function() {
+						removePopup()
+						while (document.getElementById("content").firstChild) {
+							document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+						}
+					}]);
+				}
+
+
+			}
+			
+			function popup(message, buttons, buttonActions) {
+				changeClasses(true);
+				popupActive = true;
+				pop = document.createElement("div");
+				pop.className = "popup";
+				var p = document.createElement("p");
+				p.className = "dynamic";
+				p.appendChild(document.createTextNode(message));
+				pop.appendChild(p);
+				var buttonsToAdd = [];
+				for (i = 0; i < buttons.length; i++) {
+					buttonsToAdd[i] = document.createElement("button");
+					buttonsToAdd[i].className = "button";
+					buttonsToAdd[i].appendChild(document.createTextNode(buttons[i]));
+					buttonsToAdd[i].onclick = buttonActions[i];
+					pop.appendChild(buttonsToAdd[i]);
+				}
+				
+				document.getElementById("popupWrapper").appendChild(pop);
+			}
+
+
+			var dayOfWeek = "Saturday";
+			
+			function update() {	
+			
+				if (gpa > 4000) {
+					gpa = 4000;
+				}
+				
+				var timeElement = document.getElementById("time");
+				
+				for (i = 0; i < toUpdate.length; i++) {
+					toUpdate[i].innerHTML = updateValues[i];
+				}
+				
+				toUpdate.splice(0, toUpdate.length);
+				updateValues.splice(0, updateValues.length);
+
+
+				if (time > 12 && time < 24) {
+					timeElement.innerHTML = time - 12 + ":00 P.M.";
+				}
+				else if (time === 12) {
+					timeElement.innerHTML = "12:00 P.M.";
+				}
+				else if (time === 24) {
+					timeElement.innerHTML = "12:00 A.M.";
+					day++;
+					time -= 24;
+					document.getElementById("dateSpan").innerHTML = day;
+				}
+				else if (time > 24) {
+					time -= 24;
+					timeElement.innerHTML = time + ":00 A.M.";
+					day++;
+					document.getElementById("dateSpan").innerHTML = day;
+				}
+				else if (time < 12) {
+					timeElement.innerHTML = time + ":00 A.M.";
+				}
+				if (time === 0) {
+					timeElement.innerHTML = "12:00 A.M.";
+				}
+
+				checkOver();
+				checkSchool();
+				var weekdays = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+				
+				var whichDay = day;
+				while (whichDay > 7) {
+					whichDay = whichDay - 7;
+				}
+				dayOfWeek = weekdays[whichDay - 1];
+				document.getElementById("weekday").innerHTML = dayOfWeek;
+
+				checkVitals();
+				console.log(toUpdate);
+
+			}
+			
+			(function() {
+				popup("Welcome to 31 Days to HYPSMC! Your goal is to gain acceptances to the six most prestigious universities in the United States: Harvard, Yale, Princeton, Stanford, MIT, and Caltech.", ["OK"], [function() {
+					removePopup();
+					popup("Raise your GPA and SAT, work on your essays, join and attend extracurriculars, and complete interviews to strengthen your application.", ["OK"], [function() {
+						removePopup();
+						popup("Excessive studying can have disastrous effects. Keep a close eye on your sanity and exhaustion.", ["OK"], [function() {
+							removePopup();
+							popup("Missing school puts you at risk of suspension and even expulsion. Attend school by clicking the button in the top-right corner.", ["OK"], [function() {
+								removePopup();
+								popup("Applications will be submitted on December 31st at midnight. Good luck!", ["OK"], [function() {
+									removePopup();
+								}]);
+							}]);
+						}]);
+					}]);
+				}]);
+			})();
+		</script>
+	</body>
+</html>
