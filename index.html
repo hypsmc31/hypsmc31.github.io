@@ -736,27 +736,27 @@
 				}
 
 				else if (button === 8) {
-					Cookies.set("gpa", gpa, {expires: 30});
-					Cookies.set("sat", sat, {expires: 30});
-					Cookies.set("exhaustion", exhaustion, {expires: 30});
-					Cookies.set("sanity", sanity, {expires: 30});
-					Cookies.set("time", time, {expires: 30});
-					Cookies.set("day", day, {expires: 30});
-					Cookies.set("timesAttended[0]", timesAttended[0], {expires: 30});
-					Cookies.set("timesAttended[1]", timesAttended[1], {expires: 30});
-					Cookies.set("timesAttended[2]", timesAttended[2], {expires: 30});
-					Cookies.set("timesAttended[3]", timesAttended[3], {expires: 30});
-					Cookies.set("timesAttended[4]", timesAttended[4], {expires: 30});
-					Cookies.set("dayOfWeek", dayOfWeek, {expires: 30});
-					Cookies.set("essays", essays, {expires: 30});
-					Cookies.set("hoursMissed", hoursMissed, {expires: 30});
-					Cookies.set("suspended", suspended, {expires: 30});
-					Cookies.set("social", social, {expires: 30});
-					Cookies.set("interResults[0]", interResults[0]);
-					Cookies.set("interResults[1]", interResults[1]);
-					Cookies.set("interResults[2]", interResults[2]);
-					Cookies.set("interResults[3]", interResults[3]);
-					Cookies.set("interResults[4]", interResults[4]);
+					localStorage.setItem("gpa", gpa);
+					localStorage.setItem("sat", sat);
+					localStorage.setItem("exhaustion", exhaustion);
+					localStorage.setItem("sanity", sanity);
+					localStorage.setItem("time", time);
+					localStorage.setItem("day", day);
+					localStorage.setItem("timesAttended[0]", timesAttended[0]);
+					localStorage.setItem("timesAttended[1]", timesAttended[1]);
+					localStorage.setItem("timesAttended[2]", timesAttended[2]);
+					localStorage.setItem("timesAttended[3]", timesAttended[3]);
+					localStorage.setItem("timesAttended[4]", timesAttended[4]);
+					localStorage.setItem("dayOfWeek", dayOfWeek);
+					localStorage.setItem("essays", essays);
+					localStorage.setItem("hoursMissed", hoursMissed);
+					localStorage.setItem("suspended", suspended);
+					localStorage.setItem("social", social);
+					localStorage.setItem("interResults[0]", interResults[0]);
+					localStorage.setItem("interResults[1]", interResults[1]);
+					localStorage.setItem("interResults[2]", interResults[2]);
+					localStorage.setItem("interResults[3]", interResults[3]);
+					localStorage.setItem("interResults[4]", interResults[4]);
 					popup("Game saved in local storage.", ["OK"], [removePopup]);
 				}
 
@@ -1040,7 +1040,7 @@
 			
 				var harvardR = Math.random() * 2000 + 1000;
 				var yaleR = Math.random() * 2000 + 1000;
-				var princetonR = Math.random() * 2000 + 1000;
+				var princetonR = Math.random() * 3000 + 1000;
 				var stanfordR = Math.random() * 3000 + 1000;
 				var mitR = Math.random() * 3000 + 1000;
 				if ((gpa * 1.6) + (ec.length * 750) + (sat * 2) + interResults[0] + essayScore + leadershipScore > (17000 + harvardR)) {
@@ -1055,7 +1055,7 @@
 				else {
 					results[1] = false;
 				}
-				if ((gpa * 1.5) + (ec.length * 750) + (sat * 2) + interResults[2] + essayScore + leadershipScore * .8 > (18000 + princetonR)) {
+				if ((gpa * 1.5) + (ec.length * 750) + (sat * 2) + interResults[2] + essayScore + leadershipScore * .8 > (17000 + princetonR)) {
 					results[2] = true;;
 				}
 				else {
@@ -1235,7 +1235,7 @@
 
 			}
 
-			if (!Cookies.get("gpa")) {
+			if (!localStorage.getItem("gpa")) {
 			
 			(function() {
 				popup("Welcome to 31 Days to HYPSMC! Your goal is to gain acceptances to six of the most prestigious universities in the United States: Harvard, Yale, Princeton, Stanford, MIT, and Caltech.", ["OK"], [function() {
@@ -1257,32 +1257,32 @@
 			}
 
 			else {
-				gpa = parseInt(Cookies.get("gpa"));
-				sat = parseInt(Cookies.get("sat"));
-				exhaustion = parseInt(Cookies.get("exhaustion"));
-				sanity = parseInt(Cookies.get("sanity"));
-				essays = parseInt(Cookies.get("essays"));
-				social = parseInt(Cookies.get("social"));
-				hoursMissed = parseInt(Cookies.get("hoursMissed"));
-				timesAttended[0] = parseInt(Cookies.get("timesAttended[0]"));
-				timesAttended[1] = parseInt(Cookies.get("timesAttended[1]"));
-				timesAttended[2] = parseInt(Cookies.get("timesAttended[2]"));
-				timesAttended[3] = parseInt(Cookies.get("timesAttended[3]"));
-				timesAttended[4] = parseInt(Cookies.get("timesAttended[4]"));
-				if (Cookies.get("suspended") === "true") {
+				gpa = parseInt(localStorage.getItem("gpa"));
+				sat = parseInt(localStorage.getItem("sat"));
+				exhaustion = parseInt(localStorage.getItem("exhaustion"));
+				sanity = parseInt(localStorage.getItem("sanity"));
+				essays = parseInt(localStorage.getItem("essays"));
+				social = parseInt(localStorage.getItem("social"));
+				hoursMissed = parseInt(localStorage.getItem("hoursMissed"));
+				timesAttended[0] = parseInt(localStorage.getItem("timesAttended[0]"));
+				timesAttended[1] = parseInt(localStorage.getItem("timesAttended[1]"));
+				timesAttended[2] = parseInt(localStorage.getItem("timesAttended[2]"));
+				timesAttended[3] = parseInt(localStorage.getItem("timesAttended[3]"));
+				timesAttended[4] = parseInt(localStorage.getItem("timesAttended[4]"));
+				if (localStorage.getItem("suspended") === "true") {
 					suspended = true;
 				}
 				else {
 					suspended = false;
 				}
-				dayOfWeek = Cookies.get("dayOfWeek");
-				time = parseInt(Cookies.get("time"));
-				day = parseInt(Cookies.get("day"));
-				interResults[0] = parseInt(Cookies.get("interResults[0]"));
-				interResults[1] = parseInt(Cookies.get("interResults[1]"));
-				interResults[2] = parseInt(Cookies.get("interResults[2]"));
-				interResults[3] = parseInt(Cookies.get("interResults[3]"));
-				interResults[4] = parseInt(Cookies.get("interResults[4]"));
+				dayOfWeek = localStorage.getItem("dayOfWeek");
+				time = parseInt(localStorage.getItem("time"));
+				day = parseInt(localStorage.getItem("day"));
+				interResults[0] = parseInt(localStorage.getItem("interResults[0]"));
+				interResults[1] = parseInt(localStorage.getItem("interResults[1]"));
+				interResults[2] = parseInt(localStorage.getItem("interResults[2]"));
+				interResults[3] = parseInt(localStorage.getItem("interResults[3]"));
+				interResults[4] = parseInt(localStorage.getItem("interResults[4]"));
 				for (i = 4; i >= 0; i--) {
 					if (interResults[i] != -1) {
 						document.getElementById("interview").remove(i);
