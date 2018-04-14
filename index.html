@@ -752,6 +752,11 @@
 					Cookies.set("hoursMissed", hoursMissed, {expires: 30});
 					Cookies.set("suspended", suspended, {expires: 30});
 					Cookies.set("social", social, {expires: 30});
+					Cookies.set("interResults[0]", interResults[0]);
+					Cookies.set("interResults[1]", interResults[1]);
+					Cookies.set("interResults[2]", interResults[2]);
+					Cookies.set("interResults[3]", interResults[3]);
+					Cookies.set("interResults[4]", interResults[4]);
 					popup("Game saved in local storage.", ["OK"], [removePopup]);
 				}
 
@@ -1273,12 +1278,22 @@
 				dayOfWeek = Cookies.get("dayOfWeek");
 				time = parseInt(Cookies.get("time"));
 				day = parseInt(Cookies.get("day"));
-				gpa = Cookies.get("gpa");
+				interResults[0] = parseInt(Cookies.get("interResults[0]"));
+				interResults[1] = parseInt(Cookies.get("interResults[1]"));
+				interResults[2] = parseInt(Cookies.get("interResults[2]"));
+				interResults[3] = parseInt(Cookies.get("interResults[3]"));
+				interResults[4] = parseInt(Cookies.get("interResults[4]"));
+				for (i = 0; i < 5; i++) {
+					if (interResults[i] != -1) {
+						document.getElementById("interview").remove(i);
+					}
+				}
 				updateValue("gpa",  Math.round((gpa / 1000) * 100) / 100);
 				updateValue("sat", sat);
 				updateValue("missed", hoursMissed);
 				updateValue("exhaustion", exhaustion);
 				updateValue("sanity", sanity);
+				alert(Cookies.get("sajdfasdf"));
 				updateValue("social", social);
 				updateValue("complete", essays);
 				update();
