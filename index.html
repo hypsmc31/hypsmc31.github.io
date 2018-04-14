@@ -267,7 +267,7 @@
 				<span id="dateSpan">1</span> December, <span id="weekday">Saturday</span> | <span id="time">3:00 P.M.</span>
 				
 				<button class="button" id="school"  onclick="handleAction(3)">Go to school</button>
-				<button class="button" onclick="handleAction(8)" style="margin-right: 5px;">Save / New game</button>
+				<button class="button" onclick="handleAction(8)" style="margin-right: 5px;">Save / Delete save</button>
 				<br />
 				
 
@@ -736,7 +736,7 @@
 				}
 
 				else if (button === 8) {
-					popup("", ["Save", "Delete save"], [function() {
+					popup("Progress is saved in local storage.", ["Save", "Delete save"], [function() {
 						localStorage.setItem("gpa", gpa);
 						localStorage.setItem("sat", sat);
 						localStorage.setItem("exhaustion", exhaustion);
