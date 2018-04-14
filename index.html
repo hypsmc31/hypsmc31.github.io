@@ -742,7 +742,6 @@
 					Cookies.set("sanity", sanity, {expires: 30});
 					Cookies.set("time", time, {expires: 30});
 					Cookies.set("day", day, {expires: 30});
-					Cookies.set("dayOfWeek", dayOfWeek, {expires: 30});
 					Cookies.set("timesAttended[0]", timesAttended[0], {expires: 30});
 					Cookies.set("timesAttended[1]", timesAttended[1], {expires: 30});
 					Cookies.set("timesAttended[2]", timesAttended[2], {expires: 30});
@@ -752,6 +751,7 @@
 					Cookies.set("essays", essays, {expires: 30});
 					Cookies.set("hoursMissed", hoursMissed, {expires: 30});
 					Cookies.set("suspended", suspended, {expires: 30});
+					Cookies.set("social", social, {expires: 30});
 					popup("Game saved in local storage.", ["OK"], [removePopup]);
 				}
 
@@ -1252,27 +1252,36 @@
 			}
 
 			else {
-				gpa = Cookies.get("gpa");
-				sat = Cookies.get("sat");
-				exhaustion = Cookies.get("exhaustion");
-				sanity = Cookies.get("sanity");
-				essays = Cookies.get("essays");
-				hoursMissed = Cookies.get("hoursMissed");
-				timesAttended[0] = Cookies.get("timesAttended[0]");
-				timesAttended[1] = Cookies.get("timesAttended[1]");
-				timesAttended[2] = Cookies.get("timesAttended[2]");
-				timesAttended[3] = Cookies.get("timesAttended[3]");
-				timesAttended[4] = Cookies.get("timesAttended[4]");
+				gpa = parseInt(Cookies.get("gpa"));
+				sat = parseInt(Cookies.get("sat"));
+				exhaustion = parseInt(Cookies.get("exhaustion"));
+				sanity = parseInt(Cookies.get("sanity"));
+				essays = parseInt(Cookies.get("essays"));
+				social = parseInt(Cookies.get("social"));
+				hoursMissed = parseInt(Cookies.get("hoursMissed"));
+				timesAttended[0] = parseInt(Cookies.get("timesAttended[0]"));
+				timesAttended[1] = parseInt(Cookies.get("timesAttended[1]"));
+				timesAttended[2] = parseInt(Cookies.get("timesAttended[2]"));
+				timesAttended[3] = parseInt(Cookies.get("timesAttended[3]"));
+				timesAttended[4] = parseInt(Cookies.get("timesAttended[4]"));
 				if (Cookies.get("suspended") === "true") {
-					alert("true");
+					suspended = true;
 				}
 				else {
-					alert(typeof Cookies.get("suspended") );
+					suspended = false;
 				}
+				dayOfWeek = Cookies.get("dayOfWeek");
+				time = parseInt(Cookies.get("time"));
+				day = parseInt(Cookies.get("day"));
 				gpa = Cookies.get("gpa");
-				gpa = Cookies.get("gpa");
-				gpa = Cookies.get("gpa");
-				gpa = Cookies.get("gpa");
+				updateValue("gpa", gpa);
+				updateValue("sat", sat);
+				updateValue("hoursMissed", hoursMissed);
+				updateValue("exhaustion", exhaustion);
+				updateValue("sanity", sanity);
+				updateValue("social", social);
+				updateValue("complete", essays);
+				update();
 				popup("Game restored from local storage.", ["OK"], [removePopup]);
 			}
 		</script>
