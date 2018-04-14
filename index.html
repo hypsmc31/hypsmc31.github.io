@@ -267,7 +267,7 @@
 				<span id="dateSpan">1</span> December, <span id="weekday">Saturday</span> | <span id="time">3:00 P.M.</span>
 				
 				<button class="button" id="school"  onclick="handleAction(3)">Go to school</button>
-				<button class="button" onclick="handleAction(8)" style="margin-right: 5px;">Save game</button>
+				<button class="button" onclick="handleAction(8)" style="margin-right: 5px;">Save / New game</button>
 				<br />
 				
 
@@ -736,28 +736,34 @@
 				}
 
 				else if (button === 8) {
-					localStorage.setItem("gpa", gpa);
-					localStorage.setItem("sat", sat);
-					localStorage.setItem("exhaustion", exhaustion);
-					localStorage.setItem("sanity", sanity);
-					localStorage.setItem("time", time);
-					localStorage.setItem("day", day);
-					localStorage.setItem("timesAttended[0]", timesAttended[0]);
-					localStorage.setItem("timesAttended[1]", timesAttended[1]);
-					localStorage.setItem("timesAttended[2]", timesAttended[2]);
-					localStorage.setItem("timesAttended[3]", timesAttended[3]);
-					localStorage.setItem("timesAttended[4]", timesAttended[4]);
-					localStorage.setItem("dayOfWeek", dayOfWeek);
-					localStorage.setItem("essays", essays);
-					localStorage.setItem("hoursMissed", hoursMissed);
-					localStorage.setItem("suspended", suspended);
-					localStorage.setItem("social", social);
-					localStorage.setItem("interResults[0]", interResults[0]);
-					localStorage.setItem("interResults[1]", interResults[1]);
-					localStorage.setItem("interResults[2]", interResults[2]);
-					localStorage.setItem("interResults[3]", interResults[3]);
-					localStorage.setItem("interResults[4]", interResults[4]);
-					popup("Game saved in local storage.", ["OK"], [removePopup]);
+					popup("", ["Save", "Delete save"], [function() {
+						localStorage.setItem("gpa", gpa);
+						localStorage.setItem("sat", sat);
+						localStorage.setItem("exhaustion", exhaustion);
+						localStorage.setItem("sanity", sanity);
+						localStorage.setItem("time", time);
+						localStorage.setItem("day", day);
+						localStorage.setItem("timesAttended[0]", timesAttended[0]);
+						localStorage.setItem("timesAttended[1]", timesAttended[1]);
+						localStorage.setItem("timesAttended[2]", timesAttended[2]);
+						localStorage.setItem("timesAttended[3]", timesAttended[3]);
+						localStorage.setItem("timesAttended[4]", timesAttended[4]);
+						localStorage.setItem("dayOfWeek", dayOfWeek);
+						localStorage.setItem("essays", essays);
+						localStorage.setItem("hoursMissed", hoursMissed);
+						localStorage.setItem("suspended", suspended);
+						localStorage.setItem("social", social);
+						localStorage.setItem("interResults[0]", interResults[0]);
+						localStorage.setItem("interResults[1]", interResults[1]);
+						localStorage.setItem("interResults[2]", interResults[2]);
+						localStorage.setItem("interResults[3]", interResults[3]);
+						localStorage.setItem("interResults[4]", interResults[4]);	
+						removePopup();
+					}, function() {
+						localStorage.clear();
+						removePopup();
+					}]);
+					
 				}
 
 				
