@@ -1048,42 +1048,42 @@
 			function showDecisions(currentDecision, accepted) {
 				if (currentDecision === 0) {
 					document.getElementById("content").style.display = "none";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "<span style='font-weight: bold;'>Congratulations!</span> I am delighted to inform you that the Committee on Admissions has admitted you to the Class of 2023. Please accept my personal congratulations for your outstanding achievements. <br /><br /> Faced with many more talented and highly qualified candidates than it has room to admit, the Admissions Committee has taken great care to choose individuals who present extraordinary academic, extracurricular and personal strengths. In making each admission decision, the Committee keeps in mind that the excellence of Harvard College depends most of all on the talent and promise of the people assembled here, particularly our students. In voting to offer you admission, the Committee has demonstrated its firm belief that you can make important contributions during your college years and beyond." : "The Committee on Admissions has completed its Regular Decision meetings, and I am very sorry to inform you that we cannot offer you admission to the Class of 2023. I wish that a different decision had been possible, but I hope that receiving our final decision now will be helpful to you as you make your college plans. ");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "<span style='font-weight: bold;'>Congratulations!</span> I am delighted to inform you that the Committee on Admissions has admitted you to the Class of 2023. Please accept my personal congratulations for your outstanding achievements. <br /><br /> Faced with many more talented and highly qualified candidates than it has room to admit, the Admissions Committee has taken great care to choose individuals who present extraordinary academic, extracurricular and personal strengths. In making each admission decision, the Committee keeps in mind that the excellence of Harvard College depends most of all on the talent and promise of the people assembled here, particularly our students. In voting to offer you admission, the Committee has demonstrated its firm belief that you can make important contributions during your college years and beyond." : "The Committee on Admissions has completed its Regular Decision meetings, and I am very sorry to inform you that we cannot offer you admission to the Class of 2023. ");
 					document.getElementById("result").style.display = "block";
 					document.getElementById("harvardDiv").style.display = "block";
 				}	
 				if (currentDecision === 1) {
 					document.getElementById("harvardLogo").style.display = "none";
 					document.getElementById("yaleLogo").style.display = "block";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "" : "After careful consideration of your application, I am sorry to inform you that the Admissions Committee is unable to offer you admission to the Class of 2023.");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "Welcome to Yale College! It is with the greatest enthusiasm that I write to congratulate you on your admission to the Class of 2023. You have every reason to feel proud of your accomplishment, and I am delighted at the prospect that you will join our community next fall. <br /><br /> For over three hundred years, Yale's motto \"Lux et Veritas\" - \"Light and Truth\" - has guided Yale students, faculty and alumni in their pursuit of knowledge and leadership. As a Yale student you will engage astonishing intellectual, cultural, and scientific resources. Your Yale education will equip you with the knowledge and wisdom to make an impact in any field, anywhere in the world." : "The Yale Admissions Committee has completed its evaluation of this year's candidates, and I am genuinely sorry that we are not able to offer you a place in the Class of 2023.");
 					document.getElementById("result").style.backgroundColor = "#0F4D92";
 					
 				}
 				if (currentDecision === 2) {
 					document.getElementById("yaleLogo").style.display = "none";
 					document.getElementById("princetonLogo").style.display = "block";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "princeton accepted ." : "rejected ");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "Congratulations! I am delighted to offer you admission to Princeton's Class of 2023. Your academic accomplishments, extracurricular achievements, and personal qualities stood out in a pool of over thirty thousand applicants. We know from reading your file that you are the kind of student who will take advantage of all that Princeton has to offer, and the University will benefit from your many talents. " : "I am sorry to inform you that we are not able to admit you to Princeton University this year. ");
 					document.getElementById("result").style.backgroundColor = "#FF8F00";
 					
 				}
 				if (currentDecision === 3) {
 					document.getElementById("princetonLogo").style.display = "none";
 					document.getElementById("stanfordLogo").style.display = "block";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "stanford accepted ." : "rejected ");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "Congratulations! The Admissiosn Committee joins me in the most rewarding part of my job-offering you admission to Stanford University and inviting you to join our Class of 2023. <br /><br /> You have set yourself apart, and we are impressed and inspired by your passion, determination and accomplishments. We acknowledge and celebrate all you have worked for with the good news this letter brings." : "I am very sorry to let you know that we are unable to offer you admission to Stanford University. ");
 					document.getElementById("result").style.backgroundColor = "#8c1515";
 					
 				}
 				if (currentDecision === 4) {
 					document.getElementById("stanfordLogo").style.display = "none";
 					document.getElementById("mitLogo").style.display = "block";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "mit accepted ." : "rejected ");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "On behalf of the Admissions Committee, it is my pleasure to offer you admission to the MIT Class of 2023! You stood out as one of the most talented and promising students in one of the most competitive applicant pools in the history of the Institute. Your commitment to personal excellence and principled goals has convinced us that you will both contribute to our diverse community and thrive within our academic enviroment. We think that you and MIT are a great match." : "The Admissions Committee has completed its review of our applications, and I am so sorry to tell you that we are unable to offer you admission to MIT.");
 					document.getElementById("result").style.backgroundColor = "#A31F34";
 					
 				}
 				if (currentDecision === 5) {
 					document.getElementById("mitLogo").style.display = "none";
 					document.getElementById("caltechLogo").style.display = "block";
-					document.getElementById("collegeResult").innerHTML = (accepted ? "caltech accepted ." : "rejected ");
+					document.getElementById("collegeResult").innerHTML = (accepted ? "Congratulations! It is an honor to offer you admission to the California Institute of Technology and the Class of 2023. <br /> <br /> The staff and faculty on the Admissions Committee see in you not only an accomplished student, but also a person with the passion and creativity to pursue mathematics, sciecnce and engineering at the highest level. You have the opportunity to take your place among a collaborative and diverse community of scholars. It takes bold curiosity to question fundamental science, but that is integral to Caltech's intrepid mission. We invite you to share in our commitment to explore the kinds of daring and innovative advances that will transform our future." : "The Freshman Admissions Committee has carefully read, evaluated, and discussed your application, and I am writing to inform you that we are not able to offer you a place in the freshman class.");
 					document.getElementById("result").style.backgroundColor = "#FF6C0C";
 					var b = document.getElementById("decisionButton");
 					b.parentNode.removeChild(b);
