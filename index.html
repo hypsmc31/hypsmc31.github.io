@@ -1283,7 +1283,7 @@
 				interResults[2] = parseInt(Cookies.get("interResults[2]"));
 				interResults[3] = parseInt(Cookies.get("interResults[3]"));
 				interResults[4] = parseInt(Cookies.get("interResults[4]"));
-				for (i = 0; i < 5; i++) {
+				for (i = 4; i >= 0; i--) {
 					if (interResults[i] != -1) {
 						document.getElementById("interview").remove(i);
 					}
@@ -1293,7 +1293,6 @@
 				updateValue("missed", hoursMissed);
 				updateValue("exhaustion", exhaustion);
 				updateValue("sanity", sanity);
-				alert(Cookies.get("sajdfasdf"));
 				updateValue("social", social);
 				updateValue("complete", essays);
 				update();
