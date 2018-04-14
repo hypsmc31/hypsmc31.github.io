@@ -1274,9 +1274,9 @@
 				time = parseInt(Cookies.get("time"));
 				day = parseInt(Cookies.get("day"));
 				gpa = Cookies.get("gpa");
-				updateValue("gpa", gpa);
+				updateValue("gpa",  Math.round((gpa / 1000) * 100) / 100);
 				updateValue("sat", sat);
-				updateValue("hoursMissed", hoursMissed);
+				updateValue("missed", hoursMissed);
 				updateValue("exhaustion", exhaustion);
 				updateValue("sanity", sanity);
 				updateValue("social", social);
