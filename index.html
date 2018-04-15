@@ -766,9 +766,11 @@
 							}
 						}
 						removePopup();
+						popup("Game saved in local storage.", ["OK"], [removePopup]);
 					}, function() {
 						localStorage.clear();
 						removePopup();
+						popup("Save deleted. Refresh the page to restart.", ["OK"], [removePopup]);
 					}]);
 					
 				}
