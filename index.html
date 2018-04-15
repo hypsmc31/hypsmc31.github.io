@@ -1101,6 +1101,7 @@
 			}
 
 			function showDecisions(currentDecision, accepted) {
+				localStorage.clear();
 				if (currentDecision === 0) {
 					document.getElementById("content").style.display = "none";
 					document.getElementById("collegeResult").innerHTML = (accepted ? "<span style='font-weight: bold;'>Congratulations!</span> I am delighted to inform you that the Committee on Admissions has admitted you to the Class of 2023. Please accept my personal congratulations for your outstanding achievements. <br /><br /> Faced with many more talented and highly qualified candidates than it has room to admit, the Admissions Committee has taken great care to choose individuals who present extraordinary academic, extracurricular and personal strengths. In making each admission decision, the Committee keeps in mind that the excellence of Harvard College depends most of all on the talent and promise of the people assembled here, particularly our students. In voting to offer you admission, the Committee has demonstrated its firm belief that you can make important contributions during your college years and beyond." : "The Committee on Admissions has completed its Regular Decision meetings, and I am very sorry to inform you that we cannot offer you admission to the Class of 2023. ");
