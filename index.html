@@ -426,7 +426,6 @@
 			</div>
 		</div>
 
-		<script src="js.cookie.js"></script>
 
 		<script type="text/javascript">
 		
@@ -736,7 +735,7 @@
 				}
 
 				else if (button === 8) {
-					popup("Progress is saved in local storage.", ["Save", "Delete save"], [function() {
+					popup("Progress will be saved in local storage.", ["Save", "Delete save"], [function() {
 						localStorage.setItem("gpa", gpa);
 						localStorage.setItem("sat", sat);
 						localStorage.setItem("exhaustion", exhaustion);
@@ -758,6 +757,14 @@
 						localStorage.setItem("interResults[2]", interResults[2]);
 						localStorage.setItem("interResults[3]", interResults[3]);
 						localStorage.setItem("interResults[4]", interResults[4]);	
+						for (i = 0; i < 5; i++) {
+							if (ec[i]) {
+								localStorage.setItem("ec[" + i + "]", ec[i]);
+							}
+							else {
+								localStorage.setItem("ec[" + i + "]", false);
+							}
+						}
 						removePopup();
 					}, function() {
 						localStorage.clear();
@@ -1248,7 +1255,7 @@
 					removePopup();
 					popup("Raise your GPA and SAT, work on your essays, join and attend extracurriculars, and complete interviews to strengthen your application.", ["OK"], [function() {
 						removePopup();
-						popup("Excessive studying can have disastrous effects. Keep a close eye on your sanity and exhaustion.", ["OK"], [function() {
+						popup("Excessive studying can have disastrous effects. Don't let your sanity drop too low, and your exhaustion grow too high.", ["OK"], [function() {
 							removePopup();
 							popup("Missing school puts you at risk of suspension and even expulsion. Attend school by clicking the button in the top-right corner.", ["OK"], [function() {
 								removePopup();
@@ -1293,6 +1300,38 @@
 					if (interResults[i] != -1) {
 						document.getElementById("interview").remove(i);
 					}
+				}
+				for (i = 0; i < 5; i++) {
+					var whichClub = localStorage.getItem("ec[" + i + "]");
+					if (whichClub) {
+						if (whichClub === "Football") {
+							firstTimeEc("Football", "football");
+						}
+						else if (whichClub === "Academic Games") {
+							firstTimeEc("Academic Games", "acaGames");
+						}
+						else if (whichClub === "Student Newspaper") {
+							firstTimeEc("Student Newspaper", "newspaper");
+						}
+						else if (whichClub === "Math club") {
+							firstTimeEc("Math club", "math");
+						}
+					}
+				}
+				if (timesAttended[0] >= 8) {
+					document.getElementById("leadership").innerHTML += "President of Student Government <br /> <br />";
+				}
+				if (timesAttended[1] >= 8) {
+					document.getElementById("leadership").innerHTML += "Football Team Captain <br /> <br />";
+				}
+				if (timesAttended[2] >= 8) {
+					document.getElementById("leadership").innerHTML += "President of Academic Games <br /> <br />";
+				}
+				if (timesAttended[3] >= 8) {
+					document.getElementById("leadership").innerHTML += "Editor-in-chief of Student Newspaper <br /> <br />";
+				}
+				if (timesAttended[4] >= 8) {
+					document.getElementById("leadership").innerHTML += "President of Math club <br /> <br />";
 				}
 				updateValue("gpa",  Math.round((gpa / 1000) * 100) / 100);
 				updateValue("sat", sat);
