@@ -522,15 +522,16 @@
 				// GPA
 				if (button === 0) {
 					
-					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [
 							function() {
 								sanity -= 5;
 								updateValue("sanity", sanity);
 								exhaustion += 5;
 								updateValue("exhaustion", exhaustion);
-								
-								gpa += 5;
+								if (gpa <= 3995) {
+									gpa += 5;
+								}
 								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
 								calcMissed(3);
 								time += 3;
@@ -545,7 +546,9 @@
 						updateValue("exhaustion", exhaustion);
 						updateValue("sanity", sanity);
 						time += 3;
-						gpa += 5;
+						if (gpa <= 3995) {
+							gpa += 5;
+						}
 						console.log(gpa);
 						updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
 						update();
@@ -554,7 +557,7 @@
 				// SAT
 				else if (button === 1) {
 				
-					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 5 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [
 							function() {
 								if (sat <= 1590) {
@@ -588,7 +591,7 @@
 				
 				// SLEEP
 				else if (button === 2) {
-					if (time > 1 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 1 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [
 							function() {
 								if (exhaustion <= 50) {
@@ -621,12 +624,12 @@
 				
 				// SCHOOL
 				else if (button === 3) {
-					if (time < 8 || time > 14 || dayOfWeek === "Saturday" || dayOfWeek === "Sunday") {
+					if ((time < 8 || time > 14 || dayOfWeek === "Saturday" || dayOfWeek === "Sunday") && day != 25) {
 						popup("School is from 8:00 A.M. to 3:00 P.M. on weekdays.", ["OK"], [function() {
 							removePopup();
 						}]);
 					}
-					else {
+					else if (day != 25) {
 						time += (15 - time);
 						exhaustion += 20;
 						sanity -= 10;
@@ -634,11 +637,14 @@
 						updateValue("exhaustion", exhaustion);
 						update();
 					}
+					else if (day === 25) {
+						popup("Merry Christmas!", ["OK"], [removePopup]);
+					}
 				}
 				
 				// NAP
 				else if (button === 4) {
-					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
 							if (exhaustion >= 5) {
 								exhaustion -= 5;
@@ -682,7 +688,7 @@
 
 				// WRITE
 				else if (button === 6) {
-					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 7 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
 							hoursMissed++;
 							essays++;
@@ -711,7 +717,7 @@
 				// TV
 				else if (button === 7) {
 				
-					if (time > 6 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday") {
+					if (time > 6 && time < 15 && dayOfWeek != "Saturday" && dayOfWeek != "Sunday" && day != 25) {
 						popup("You will miss school. Proceed?", ["Yes", "No"], [function() {
 							calcMissed(2);
 							time += 2;
@@ -849,7 +855,9 @@
 								if (sanity <= 95) {
 									sanity += 5;
 								}
-								gpa += 10;
+								if (gpa <= 3990) {
+									gpa += 10;
+								}
 								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
 								updateValue("sanity", sanity);
 								update();
@@ -902,7 +910,9 @@
 								if (social >= 3) {
 									social -= 3;
 								}
-								gpa += 10;
+								if (gpa <= 3990) {
+									gpa += 10;
+								}
 								updateValue("gpa", Math.round((gpa / 1000) * 100) / 100);
 								updateValue("social", social);
 								updateValue("sanity", sanity);
